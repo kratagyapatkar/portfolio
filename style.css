@@ -656,6 +656,35 @@ body.cursor-hover .cursor-ring {
   100% { opacity: 1; }
 }
 
+/* VakilBot placeholder */
+.project-placeholder--vakil {
+  background: linear-gradient(135deg, #1a1000 0%, #0a0a0a 40%, #1a1408 100%);
+}
+
+.project-placeholder--vakil::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(212, 175, 55, 0.08), transparent),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(212, 175, 55, 0.04) 28px,
+      rgba(212, 175, 55, 0.04) 29px
+    );
+}
+
+.project-placeholder--vakil .placeholder-title {
+  font-size: 28px;
+  color: #d4af37;
+}
+
+.project-placeholder--vakil .placeholder-sub {
+  color: rgba(212, 175, 55, 0.6);
+}
+
 .placeholder-title {
   font-family: var(--font-serif);
   font-size: 28px;
@@ -776,8 +805,8 @@ body.cursor-hover .cursor-ring {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .skill-category {
@@ -1003,7 +1032,7 @@ body.cursor-hover .cursor-ring {
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero { min-height: 90vh; padding-top: 100px; }
